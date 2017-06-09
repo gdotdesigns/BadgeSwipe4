@@ -24,7 +24,7 @@ public class BadgeSwipe4 extends AppCompatActivity {
 
         Date currentDateTimeString = Calendar.getInstance().getTime();
 
-        timeStamp.setText("");
+        timeStamp.setText("test");
 
     }
 
