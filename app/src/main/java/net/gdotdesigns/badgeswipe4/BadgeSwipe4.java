@@ -1,6 +1,5 @@
 package net.gdotdesigns.badgeswipe4;
 
-import android.icu.text.DateFormat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,20 +10,22 @@ import java.util.Date;
 
 public class BadgeSwipe4 extends AppCompatActivity {
 
-    TextView timeStamp = (TextView) findViewById(R.id.timeStamp);
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_badge_swipe4);
+        textView =(TextView) findViewById(R.id.textView);
     }
 
 
     public void badgeSwiped(View view){
 
-        Date currentDateTimeString = Calendar.getInstance().getTime();
+        Date currentDateTime = Calendar.getInstance().getTime();
 
-        timeStamp.setText("test");
+        textView.setText(currentDateTime
+                .toString());
 
     }
 
